@@ -6,10 +6,10 @@ const buttonClear = document.getElementById('clearPokemon');
 const appNode = document.getElementById('dex');
 
 buttonPokemon.addEventListener('click' , insertPokemon);
-buttonPokemon.addEventListener('touchstart' , insertPokemon); //*For mobile devices
+buttonPokemon.addEventListener('touchstart' , insertPokemon); //*Para moviles
 
 buttonClear.addEventListener('click' , deletePokemons);
-buttonClear.addEventListener('touchstart' , deletePokemons); //* For mobile devices
+buttonClear.addEventListener('touchstart' , deletePokemons); //* Para moviles
 
 async function insertPokemon() {
   try {
