@@ -2,14 +2,10 @@
 const baseUrl = `https://pokeapi.co/api/v2/pokemon/`;
 const pokemon = document.getElementById('pokemonName');
 const buttonPokemon = document.getElementById('searchPokemon');
-const buttonClear = document.getElementById('clearPokemon');
 const appNode = document.getElementById('dex');
 
 buttonPokemon.addEventListener('click' , insertPokemon);
-buttonPokemon.addEventListener('touchstart' , insertPokemon); //*Para moviles
-
-buttonClear.addEventListener('click' , deletePokemons);
-buttonClear.addEventListener('touchstart' , deletePokemons); //* Para moviles
+buttonPokemon.addEventListener('touchstart' , insertPokemon); //*For mobile devices
 
 async function insertPokemon() {
   try {
@@ -22,8 +18,6 @@ async function insertPokemon() {
     for (let pokemonInfo in pokemonDataJSON) { //*Convertimos el objeto JSON a array
       result.push([pokemonInfo , pokemonDataJSON[pokemonInfo]]);
     }
-
-    console.table(result); //! only for development
 
     //* Información de en frente
 
@@ -80,19 +74,15 @@ async function insertPokemon() {
     container.classList.add('container');
 
     allItems.push(container);
+    let allPokemon = appNode.childNodes;
+    allPokemon = Array.from(allPokemon);
 
+    allPokemon.forEach(pokemon => {
+    pokemon.remove(pokemon);
+    });
     appNode.append(...allItems);
 
   } catch (error) {
     alert("That pokemon isn't available. Try againt with another one!");
   }
-}
-
-function deletePokemons() {
-  let allPokemon = appNode.childNodes;
-  allPokemon = Array.from(allPokemon);
-
-  allPokemon.forEach(pokemon => {
-    pokemon.remove(pokemon);
-  });
 }
