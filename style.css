@@ -1,3 +1,57 @@
 section div img{
     width: 100;
 }
+body{
+    background-image: url(images/fondo.jpeg) ;
+    background-repeat: no-repeat;
+    background-position: inherit;
+
+}
+h1{
+    color: #fff;
+    margin-top: -17px;
+    margin-left: 390px;
+    font-size: 90px;
+
+}
+#pokemonName{
+    margin-top: 384px;
+    margin-left: 300px;
+    width: 537px;
+    height: 44px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 25px;
+}
+.buttons{
+    display: flex;
+    width: 70px;
+    margin-top: -90px;
+    margin-left: 90px;
+    
+}
+.buttons:hover{
+    transform : scale(1.1);
+	-moz-transform : scale(1.1); /* Firefox */
+	-webkit-transform : scale(1.1); /* Chrome - Safari */
+	-o-transform : scale(1.1); /* Opera */
+}
+
+.pokemonData .container img {
+    width: 280px;
+    height: 280px;
+    
+    
+    }
+.pokemonData{
+    width: 410px;
+    height: 330px;
+    margin-top: -370px;
+    margin-left: 358px;
+    font-family: Century;
+    font-size: 15px;    
+    text-align: center;
+    column-count: 2;
+    border-spacing: 10px 5px;
+}
+
