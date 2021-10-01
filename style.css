@@ -2,7 +2,7 @@ section div img{
     width: 100;
 }
 body{
-    background-image: url(images/fondo.jpeg) ;
+    background-image: url(Assets/fondo.jpeg) ;
     background-repeat: no-repeat;
     background-position: inherit;
 
